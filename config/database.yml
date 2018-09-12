@@ -8,18 +8,20 @@ default: &default
 development:
   <<: *default
   username: root
-  password: 
+  password: 12344321
   database: school_dev
 
 test:
   <<: *default
+  username: root
+  password: 12344321  
   database: school_test
 
 production:
   <<: *default
   database: school_production
   username: root
-  password: 
+  password: 12344321
 #  database: <%= ENV['RDS_DB_NAME'] %>
 #  username: <%= ENV['RDS_USERNAME'] %>
 #  password: <%= ENV['RDS_PASSWORD'] %>
