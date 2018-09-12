@@ -1,0 +1,27 @@
+
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  username: root
+  password: 
+  database: school_dev
+
+test:
+  <<: *default
+  database: school_test
+
+production:
+  <<: *default
+  database: school_production
+  username: root
+  password: 
+#  database: <%= ENV['RDS_DB_NAME'] %>
+#  username: <%= ENV['RDS_USERNAME'] %>
+#  password: <%= ENV['RDS_PASSWORD'] %>
+#  host: <%= ENV['RDS_HOSTNAME'] %>
+#  port: <%= ENV['RDS_PORT'] %>
