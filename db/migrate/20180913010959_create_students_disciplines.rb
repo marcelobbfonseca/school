@@ -1,6 +1,6 @@
-class CreateStudentDiciplines < ActiveRecord::Migration[5.2]
+class CreateStudentsDisciplines < ActiveRecord::Migration[5.2]
   def change
-    create_table :student_diciplines do |t|
+    create_table :students_disciplines do |t|
       t.references :user, foreign_key: true
       t.references :discipline, foreign_key: true
       t.float :grade
